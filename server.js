@@ -5,10 +5,10 @@ const express = require('express');
 const formatMessage = require('./utilities/messages')
 const { userJoin, getCurrentUser, userLeave, getRoomUsers } = require('./utilities/users')
 
-
 const app = express();
 const server = http.createServer(app);
 const io = socketio(server);
+
 const botName = "Shaxx"
 
 app.use(express.static(path.join(__dirname, 'static')));
